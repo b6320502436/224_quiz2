@@ -1,35 +1,37 @@
 #include<stdio.h>
 int main()
 {
-	int A[100000]={},a,b=0,c,d,e,B[1000]={},C[10000]={},In,out;
-	scanf("%d",&In);
-	A[0]=1;
-	//Cube Free Number ??
+	int a,b,c,d,e,n,m,p=1;
+	int A[10000]={},B[10000]={};
+	B[0]=1;
+	scanf("%d",&n);
 	for(a=2;a<1000;a++)
 	{
-	B[a]=a*a*a;
-	//printf("%d\n",B[a]);
+		A[a]=a*a*a;
+	//	printf("%d\n",A[a]);
 	}
-	for()
-
-//	printf("%d\n",C[a]);
-	
-	for(e=0;e<=In;e++)
+	for(b=1;b<=n;b++)
 	{
-		for(a=0;a<1000;a++)
+		B[b]=b;
+		for(a=2;a<1000;a++)
 	{
-
-		if(e%B[a]==0)
+		p=1;
+		if(b%A[a]==0)
 		{
-			printf("Not Cube Free");
-			break;
-			break;
+		p=0;
+		B[b]=0;
+		m--;
+		//printf("Not Cube Free");
 		}
 	}
-	out=e;	
-	}
-	printf("%d",out);
 	
+	m++;
+	//printf("%d %d \n",B[b],b);	
+		
+	}
+	if(p!=0)
+	printf("%d %d",m,p);
+	else 	printf("Not Cube Free");
 	
 	
 }
